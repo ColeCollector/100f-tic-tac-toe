@@ -21,10 +21,19 @@ def displayString(board):
   return value
   str the gameboard
   """
-  return None
+  for i in range(0,9):
+    if 0 in board:
+      x = board.index(0)
+      board.remove(0)
+      board.insert(x,'-')
+
+  return (f"{board[6]} {board[7]} {board[8]}\n{board[3]} {board[4]} {board[5]}\n{board[0]} {board[1]} {board[2]}")
+ 
+
 
 def main():
   board = [ 'O' , 0 , 0 , 'X' , 'O' , 0 , 0 , 0 , 'X' ] 
+  displayString(board)
   assert displayString(board) == "- - X\nX O -\nO - -"
   board = [ 0 , 'O' , 'X' , 'O' , 'O' , 0 , 'X' , 0 , 'X' ] 
   assert displayString(board) == "X - X\nO O -\n- O X"

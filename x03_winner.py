@@ -12,6 +12,7 @@ None if there is no winner
 """
 
 def whoWins(board):
+  if board[0] == board[1] == board[3]:
   
   
   
