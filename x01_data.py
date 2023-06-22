@@ -18,7 +18,7 @@ def read(square,board):
   the str value corresponding to the content of the square being checked
   None if the square is empty
   """
-  #print(f"{board[0]} {board[1]} {board[2]}\n{board[3]} {board[4]} {board[5]}\n{board[6]} {board[7]} {board[8]}\n")
+
   if board[square-1] == 'X':
     return 'X'
     
